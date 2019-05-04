@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use App\ProductSupplier;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -114,5 +115,26 @@ class ProductSupplierController extends Controller
     public function destroy(ProductSupplier $productSupplier)
     {
         //
+    }
+
+    public function orderList()
+    {
+        $orderList = Order::orderBy('created_at','desc')->paginate(3);
+        foreach ($orderList as $ol)
+        {
+            $order = ProductSupplier::find($ol->product_id);
+            $ol->order_list = $order;
+        }
+        return view('supplier.orderList',compact('orderList'));
+    }
+
+    public function orderDelivery($id)
+    {
+//        dd($id);
+        $deliveryStatus = Order::find($id);
+        $deliveryStatus->is_delivered = true;
+        $deliveryStatus->save();
+
+        return back();
     }
 }

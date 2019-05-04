@@ -21,6 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/productSupplier', 'ProductSupplierController');
 Route::get('ProductSupplier/orderList', 'ProductSupplierController@orderList')->name('product.orderList');
+Route::post('ProductSupplier/delivery/{id}', 'ProductSupplierController@orderDelivery')->name('product.orderDelivery');
 
 Route::get('/company', 'CompanyController@company')->name('company');
 Route::get('company/supplierProduct', 'CompanyController@supplierProduct')->name('supplier.product');

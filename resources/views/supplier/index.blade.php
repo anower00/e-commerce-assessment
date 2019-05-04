@@ -5,6 +5,8 @@
             <table class="table table-striped custab">
                 <thead>
                 <h1>supplier view Product</h1>
+                <a type="button" class="btn btn-success" style="height: 40px; width: 90px; position: absolute; right: 147px;"
+                   href="{{ route('product.orderList') }}">Order List</a>
                 <a type="button" class="btn btn-primary" style="position: absolute;right: 15px;width: 108px;height: 39px; border: 3px solid green" href="{{ route('productSupplier.create') }}">Add product</a>
                 <tr>
                     <th>#No</th>

@@ -10,7 +10,15 @@ class CompanyController extends Controller
 {
     public function company()
     {
-        return view('company.index');
+        $orderedProduct = Order::orderBy('created_at','desc')->paginate(3);
+
+        foreach ($orderedProduct as $op)
+        {
+            $order = ProductSupplier::find($op->product_id);
+            $op->product_order = $order;
+        }
+
+        return view('company.index',compact('orderedProduct'));
     }
 
     public function supplierProduct()
