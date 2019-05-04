@@ -4,7 +4,7 @@
         <div class="row col-md-12 col-md-offset-0 custyle">
             <table class="table table-striped custab">
                 <thead>
-                <h1>Company view Product</h1>
+                <h1>Company Product View</h1>
                 <a type="button" class="btn btn-primary" style="position: absolute;right: 15px;width: 108px;height: 39px; border: 3px solid green" href="{{ route('supplier.product') }}">Order product</a>
                 <tr>
                     <th>#No</th>

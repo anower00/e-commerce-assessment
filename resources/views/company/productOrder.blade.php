@@ -6,18 +6,20 @@
             @if(Session::has('message'))
                 <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
             @endif
-            <table class="table table-striped custab">
+            <table class="table table-striped custab text-center">
                 <thead>
                 <tr>
                     <th>PRODUCT NAME</th>
                     <th>PRODUCT CODE</th>
                     <th>PRODUCT IMAGE</th>
+                    <th>AVAILABLE PRODUCT</th>
                 </tr>
                 </thead>
                 <tr>
                     <td>{{ $productOrder->product_name }}</td>
                     <td>{{ $productOrder->product_code }}</td>
                     <td><img class="img-fluid img-thumbnail" style="height: 50px; width: 50px;" src="{{ asset('storage/productImage/' . $productOrder->product_image) }}"></td>
+                    <td>{{ $productOrder->available_product }}</td>
                 </tr>
             </table>
             <form method="post" action="{{ route('product.orderStore') }}">
