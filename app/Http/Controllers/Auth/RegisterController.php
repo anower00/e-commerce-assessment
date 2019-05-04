@@ -33,7 +33,7 @@ class RegisterController extends Controller
     protected function redirectTo()
     {
         if (auth()->user()->user_type == "SUPPLIER") {
-            return '/supplier';
+            return '/productSupplier';
         }
         return '/company';
     }
