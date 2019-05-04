@@ -26,11 +26,6 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function productSupplier()
-    {
-        return view('supplier.index');
-    }
-
     public function company()
     {
         return view('company.index');
