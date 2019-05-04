@@ -22,7 +22,7 @@
                         <td>{{ $order->product_price }} Taka</td>
                         <td>{{ $order->available_product }} Piece</td>
                         <td class="text-center">
-                            <a class='btn btn-primary btn-xs' href=""><span class="glyphicon glyphicon-edit"></span>ORDER</a>
+                            <a class='btn btn-primary btn-xs' href="{{ route('product.createOrder',$order->id) }}"><span class="glyphicon glyphicon-edit"></span>ORDER</a>
                         </td>
                     </tr>
                 @endforeach

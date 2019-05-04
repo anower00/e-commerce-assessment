@@ -24,3 +24,5 @@ Route::get('ProductSupplier/orderList', 'ProductSupplierController@orderList')->
 
 Route::get('/company', 'CompanyController@company')->name('company');
 Route::get('company/supplierProduct', 'CompanyController@supplierProduct')->name('supplier.product');
+Route::get('company/supplierProduct/createOrder/{id}', 'CompanyController@createOrder')->name('product.createOrder');
+Route::post('company/supplierProduct/orderStore', 'CompanyController@orderStore')->name('product.orderStore');
