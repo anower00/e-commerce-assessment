@@ -18,7 +18,7 @@
                     <tr>
                         <td>{{ $order->product_name }}</td>
                         <td>{{ $order->product_code }}</td>
-                        <td><img class="img-fluid img-thumbnail" style="height: 150px; width: 155px" src="{{ asset('storage/productImage/' . $order->product_image) }}"></td>
+                        <td><img class="img-fluid img-thumbnail" style="height: 50px; width: 50px;" src="{{ asset('storage/productImage/' . $order->product_image) }}"></td>
                         <td>{{ $order->product_price }} Taka</td>
                         <td>{{ $order->available_product }} Piece</td>
                         <td class="text-center">

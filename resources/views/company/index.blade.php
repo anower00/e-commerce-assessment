@@ -23,7 +23,7 @@
                         <td>{{ $ordered->id }}</td>
                         <td>{{ $ordered->product_order->product_name }}</td>
                         <td>{{ $ordered->product_order->product_code }}</td>
-                        <td><img class="img-fluid img-thumbnail" style="height: 150px; width: 155px" src="{{ asset('storage/productImage/' . $ordered->product_order->product_image) }}"></td>
+                        <td><img class="img-fluid img-thumbnail" style="height: 50px; width: 50px;" src="{{ asset('storage/productImage/' . $ordered->product_order->product_image) }}"></td>
                         <td>{{ $ordered->product_order->product_price }} TK</td>
                         <td>{{ $ordered->product_order->available_product }} Piece</td>
                         <td>{{ $ordered->quantity }}</td>

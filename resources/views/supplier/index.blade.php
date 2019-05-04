@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <div class="row col-md-12 col-md-offset-0 custyle">
-            <table class="table table-striped custab">
+            <table class="table table-striped custab text-center">
                 <thead>
                 <h1>supplier view Product</h1>
                 <a type="button" class="btn btn-success" style="height: 40px; width: 90px; position: absolute; right: 147px;"
@@ -23,7 +23,7 @@
                         <td>{{ $product->id }}</td>
                         <td>{{ $product->product_name }}</td>
                         <td>{{ $product->product_code }}</td>
-                        <td><img class="img-fluid img-thumbnail" style="height: 150px; width: 155px" src="{{ asset('storage/productImage/' . $product->product_image) }}"></td>
+                        <td><img class="img-fluid img-thumbnail" style="height: 50px; width: 50px;" src="{{ asset('storage/productImage/' . $product->product_image) }}"></td>
                         <td>{{ $product->product_price }} Taka</td>
                         <td>{{ $product->available_product }}</td>
                         <td class="text-center">

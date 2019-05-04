@@ -22,7 +22,7 @@
                         <td>{{ $order->id }}</td>
                         <td>{{ $order->order_list->product_name }}</td>
                         <td>{{ $order->order_list->product_code }}</td>
-                        <td><img class="img-fluid img-thumbnail" style="height: 150px; width: 155px" src="{{ asset('storage/productImage/' . $order->order_list->product_image) }}"></td>
+                        <td><img class="img-fluid img-thumbnail" style="height: 50px; width: 50px;" src="{{ asset('storage/productImage/' . $order->order_list->product_image) }}"></td>
                         <td>{{ $order->order_list->product_price }} Taka</td>
                         <td>{{ $order->order_list->available_product }}</td>
                         <td>{{ $order->quantity }}</td>

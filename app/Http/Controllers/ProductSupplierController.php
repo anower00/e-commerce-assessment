@@ -135,6 +135,10 @@ class ProductSupplierController extends Controller
         $deliveryStatus->is_delivered = true;
         $deliveryStatus->save();
 
+        $product = ProductSupplier::find($deliveryStatus->product_id);
+        $product->available_product-=$deliveryStatus->quantity;
+        $product->update();
+
         return back();
     }
 }

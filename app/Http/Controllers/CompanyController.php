@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Order;
 use App\ProductSupplier;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class CompanyController extends Controller
 {
@@ -39,7 +40,12 @@ class CompanyController extends Controller
         $this->validate($request, [
             'productQuantity' => 'required|integer',
         ]);
-
+        $product = ProductSupplier::find($request->product_id);
+        if ($request->productQuantity > $product->available_product){
+            Session::flash('message', 'Ordered products must be less than available products!');
+            Session::flash('alert-class', 'alert-danger');
+            return redirect()->back();
+        }
         $productOrder = new Order();
         $productOrder->product_id = $request->product_id;
         $productOrder->quantity = $request->productQuantity;
